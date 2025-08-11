@@ -11,12 +11,6 @@ html {
     margin: 0 auto;
 }
 
-
-@media (min-width: 768px) {
-   
-}
-
-
  body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -29,29 +23,45 @@ html {
     }
 
     header {
-      background-color: #1a1a1a;
       /*background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url('../img/music2.jpg');*/
-      background-image: url('../img/music2.jpg');
+      position: relative;
+      background-image: url('../img/fondo.jpg');
       background-repeat: no-repeat;
       background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      filter: brightness(100%);
-      height: 70rem;
-      padding: 2rem;
+      height:63rem;
+               
       text-align: center;
-      
-
     }
 
-    .main_titulo, .main_subtitulo{
+    .main_title{
+
+
+        padding: 0.5rem 3rem;
+        /*width: 40%;*/
+        background-color: black;
+       /* background-color:#d3cd2f !important;*/
+        /*box-shadow: 0 0 10px rgba(250,250,250,1);*/
+       /* color: rgb(84, 84, 44);*/
+        color: #d3cd2f;
+        font-size: 2rem;
+        border-radius: 1rem;
+        text-align: center;
         
-        margin: 0;
-        padding: 0 3rem;
-        background-color: #d3cd2f;
-        box-shadow: 0 0 10px rgba(250,250,250,1);
-        color: rgb(84, 84, 44);
+    }
+
+    .header-image{
+      width: 20rem;
+      position: absolute;
+      left: 80%;
+      
+    }
+
+    .main_title h1,p{
+      margin: 0;
+    }
+
+    .main_title p{
+      margin-bottom: 3rem;
     }
 
     .td-none{
@@ -59,40 +69,38 @@ html {
       color: rgb(84, 84, 44);
     }
 
-     .main_titulo{
-        font-size: 6rem;
-        /*margin-top: 6rem;*/
-    }
-
-     .main_subtitulo{
-        font-size: 3rem;
-
-    }
-
-    section#servicios {
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      background-color: #2a2809e1;/* #f9f9f9;*/
-    }
-
     .servicio {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 1rem;
       padding: 1.5rem;
       margin: 1rem;
       flex: 1 1 30%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(250,250,250,1);
       text-align: center;
+      width: 18%;
+      background-color: rgba(84, 84, 44,0.8);
+      position: relative;
     }
 
-    .imagen-servicio{
-      height: 20rem;
-      width: 20rem;
-      border-radius: 50%;
-      size: cover;
+    .eventos{
+      position: absolute;
+      background-image: url(../img/eventos.jpeg);
+      top: 5%;
+      left: 5%;
+    }
+
+    .artistas{
+      position: absolute;
+      background-image: url(../img/eventos.jpeg);
+      top:30%;
+      right:5%;
+      
+    }
+
+    .aprender{
+      position: absolute;
+      background-image: url(../img/eventos.jpeg);
+      left: 40%;
+      top: 50%;
     }
 
     .titulo-gen{
@@ -101,12 +109,7 @@ html {
       margin-bottom: 2rem;
     }
 
-    footer {
-      background-color: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-    }
+    
 
     .redes-sociales a {
       color: white;
@@ -117,13 +120,13 @@ html {
 
 
     .btn-servicio{
-      display: block;
+        display: block;
         color: black;
         text-decoration: none;
         padding: 1rem 2rem;
         margin-top: 2rem;
         background-color: rgb(206, 206, 109);
- 
+        font-size: 1rem;
         
     }
 
@@ -184,4 +187,11 @@ html {
       width: 20rem;
       
       size: cover;
+    }
+
+   footer {
+      background-color: #1a1a1a;
+      color: #d3cd2f;
+      text-align: center;
+      padding: .8rem;
     }

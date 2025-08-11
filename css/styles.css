@@ -50,8 +50,8 @@ html {
         font-family: "Permanent Marker", cursive;
         font-weight: 400;
         font-style: normal;
-        text-shadow: 2px 2px 4px rgba(255,255,255,0.7)
-        
+        text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+        text-align: justify;
     }
 
     .header-image{
@@ -65,6 +65,15 @@ html {
       margin: 0;
     }
 
+    .main_title h1{
+      text-align: center;
+    }
+
+    .generic-text{
+      color: white;
+      text-shadow: none;
+      margin-top: 2rem;
+    }
     .main_title p{
       margin-bottom: 3rem;
     }
@@ -143,7 +152,7 @@ html {
         background-color: rgb(206, 206, 109);
         font-size: 1.5rem;
         height:4.5rem;
-        
+        border-radius: 2rem;
     }
 
      .btn-servicio:hover{
@@ -182,42 +191,39 @@ html {
     text-align: center;
   }
     .evento {
-      
       background: rgb(255, 255, 255);
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 2rem 4rem;
+      /*padding: 2rem 4rem;*/
 
-      flex: 1 1 10%;
+      
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
     }
 
+    .evento .informacion{
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-gap: 2rem;
+
+    }
+
+
     .info-evento{
       text-align: left;
-      padding-right: 3rem;
+      padding: 1rem 1.5rem;
     }
 
     .info-evento span{
       font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .informacion{
-      display: flex;
-      align-items: center;
-    }
-
-
-     @media (max-width: 768px) {
-      .eventos {
-        flex: 1 1 100%;
-      }
-    } 
-
-     .imagen-evento{
-      height: 15rem;
-      width: 15rem;
+    .imagen-evento{
+      height: 100%;/*15rem;*/
+      width: 90%;/*15rem;*/
       size: cover;
+      border-radius: 1rem;
     }
 
    footer {

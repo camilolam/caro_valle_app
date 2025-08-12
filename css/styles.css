@@ -199,6 +199,7 @@ html {
       
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
+      align-content: center;
     }
 
     .evento .informacion{
@@ -212,6 +213,22 @@ html {
     .info-evento{
       text-align: left;
       padding: 1rem 1.5rem;
+    }
+
+    .info-evento--redes{
+      
+      font-size: 3rem;
+      margin-top: 2rem;
+    }
+
+     .info-evento--redes a:hover{
+      
+      color:  rgb(84, 84, 44);
+
+    }
+
+    .info-evento--redes a{
+      color:#d3cd2f
     }
 
     .info-evento span{

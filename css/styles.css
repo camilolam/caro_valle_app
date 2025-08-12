@@ -7,15 +7,9 @@ html {
 }
 
 .contenedor {
-    width: min(90%, 120rem);
+    width: min(90%, 100rem);
     margin: 0 auto;
 }
-
-
-@media (min-width: 768px) {
-   
-}
-
 
  body {
       font-family: Arial, sans-serif;
@@ -23,35 +17,65 @@ html {
       padding: 0;
       line-height: 1.6;
       font-family: "Intel One Mono", monospace;
-        font-optical-sizing: auto;
-        font-weight: weight;
-        font-style: normal;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+
+      background-color: black;/* #f9f9f9;*/
     }
 
     header {
-      background-color: #1a1a1a;
       /*background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url('../img/music2.jpg');*/
-      background-image: url('../img/music2.jpg');
+      position: relative;
+      background-image: url('../img/fondo.jpg');
       background-repeat: no-repeat;
       background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      filter: brightness(100%);
-      height: 70rem;
-      padding: 2rem;
+      height:63rem;
+               
       text-align: center;
-      
-
     }
 
-    .main_titulo, .main_subtitulo{
-        
-        margin: 0;
-        padding: 0 3rem;
-        background-color: #d3cd2f;
-        box-shadow: 0 0 10px rgba(250,250,250,1);
-        color: rgb(84, 84, 44);
+    .main_title{
+        padding: 0.5rem 3rem;
+        /*width: 40%;*/
+        background-color: black;
+       /* background-color:#d3cd2f !important;*/
+        /*box-shadow: 0 0 10px rgba(250,250,250,1);*/
+       /* color: rgb(84, 84, 44);*/
+        color: #d3cd2f;
+        font-size: 2rem;
+
+        text-align: center;
+
+        font-family: "Permanent Marker", cursive;
+        font-weight: 400;
+        font-style: normal;
+        text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
+        text-align: justify;
+    }
+
+    .header-image{
+      width: 20rem;
+      position: absolute;
+      left: 80%;
+      
+    }
+
+    .main_title h1,p{
+      margin: 0;
+    }
+
+    .main_title h1{
+      text-align: center;
+    }
+
+    .generic-text{
+      color: white;
+      text-shadow: none;
+      margin-top: 2rem;
+    }
+    .main_title p{
+      margin-bottom: 3rem;
     }
 
     .td-none{
@@ -59,40 +83,48 @@ html {
       color: rgb(84, 84, 44);
     }
 
-     .main_titulo{
-        font-size: 6rem;
-        /*margin-top: 6rem;*/
-    }
-
-     .main_subtitulo{
-        font-size: 3rem;
-
-    }
-
-    section#servicios {
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      background-color: #2a2809e1;/* #f9f9f9;*/
-    }
-
     .servicio {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 1rem;
       padding: 1.5rem;
       margin: 1rem;
       flex: 1 1 30%;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,1);
       text-align: center;
+      width: 18%;
+      background-color:rgba(84, 84, 44,0.8); /*rgba(84, 84, 44,0.8);*/
+      position: relative;
+      color: white;
+      font-size: 1.4rem;
     }
 
-    .imagen-servicio{
-      height: 20rem;
-      width: 20rem;
-      border-radius: 50%;
-      size: cover;
+    .eventos{
+      position: absolute;
+      background-image: url(../img/silueta_eventos-fondo.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 5%;
+      left: 5%;
+    }
+
+    .artistas{
+      position: absolute;
+      background-image: url(../img/silueta_artistas-fondo.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+      top:30%;
+      right:5%;
+      
+    }
+
+    .aprender{
+      position: absolute;
+      background-image: url(../img/solueta_ensenar-fondp.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30%;
+      left: 35%;
+      top: 50%;
     }
 
     .titulo-gen{
@@ -101,12 +133,7 @@ html {
       margin-bottom: 2rem;
     }
 
-    footer {
-      background-color: #1a1a1a;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-    }
+    
 
     .redes-sociales a {
       color: white;
@@ -117,14 +144,15 @@ html {
 
 
     .btn-servicio{
-      display: block;
+        display: block;
         color: black;
         text-decoration: none;
         padding: 1rem 2rem;
         margin-top: 2rem;
         background-color: rgb(206, 206, 109);
- 
-        
+        font-size: 1.5rem;
+        height:4.5rem;
+        border-radius: 2rem;
     }
 
      .btn-servicio:hover{
@@ -143,45 +171,83 @@ html {
     /*--------------------------------- eventos-------------------------------*/ 
 
 #eventos {
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      background-color: #2a2809e1;/* #f9f9f9;*/
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+
+      /*background-color: #2a2809e1;/* #f9f9f9;*/
     }
 
+  .flex-eventos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-eventos a{
+    width: 15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
     .evento {
-      
       background: rgb(255, 255, 255);
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1rem;
-      flex: 1 1 30%;
+      /*padding: 2rem 4rem;*/
+
+      
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
+      align-content: center;
     }
+
+    .evento .informacion{
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-gap: 2rem;
+
+    }
+
 
     .info-evento{
       text-align: left;
-      padding-right: 3rem;
+      padding: 1rem 1.5rem;
     }
 
-    .informacion{
-      display: flex;
-      align-items: center;
-    }
-
-
-     @media (max-width: 768px) {
-      .eventos {
-        flex: 1 1 100%;
-      }
-    } 
-
-     .imagen-evento{
-      height: 20rem;
-      width: 20rem;
+    .info-evento--redes{
       
+      font-size: 3rem;
+      margin-top: 2rem;
+    }
+
+     .info-evento--redes a:hover{
+      
+      color:  rgb(84, 84, 44);
+
+    }
+
+    .info-evento--redes a{
+      color:#d3cd2f
+    }
+
+    .info-evento span{
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .imagen-evento{
+      height: 100%;/*15rem;*/
+      width: 90%;/*15rem;*/
       size: cover;
+      border-radius: 1rem;
+    }
+
+   footer {
+      background-color: #1a1a1a;
+      color: #d3cd2f;
+      text-align: center;
+      padding: .8rem;
+
+      width: 100%;
     }

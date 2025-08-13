@@ -1,4 +1,5 @@
 html {
+    margin: 0;
     box-sizing: border-box;
     font-size: 62.5%; /* 1 rem = 10px */    
 }
@@ -26,6 +27,16 @@ html {
 
     header {
       /*background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url('../img/music2.jpg');*/
+      background-image: url('../img/fondo.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin:0;         
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      header {
+      /*background: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)), url('../img/music2.jpg');*/
       position: relative;
       background-image: url('../img/fondo.jpg');
       background-repeat: no-repeat;
@@ -33,6 +44,8 @@ html {
       height:63rem;
                
       text-align: center;
+    }
+
     }
 
     .main_title{
@@ -54,13 +67,24 @@ html {
         text-align: justify;
     }
 
+
     .header-image{
       width: 20rem;
-      position: absolute;
-      left: 80%;
+      display: block;
+      margin: 0 auto;
       
     }
 
+    @media (min-width: 768px) {
+      .header-image{
+        width: 20rem;
+        position: absolute;
+        left: 80%;
+      
+      }
+
+    }
+    
     .main_title h1,p{
       margin: 0;
     }
@@ -86,18 +110,38 @@ html {
     .servicio {
       border-radius: 1rem;
       padding: 1.5rem;
-      margin: 1rem;
+      margin: 1rem auto;
       flex: 1 1 30%;
       box-shadow: 0 0 10px rgba(0,0,0,1);
       text-align: center;
-      width: 18%;
+      width: 90%;
       background-color:rgba(84, 84, 44,0.8); /*rgba(84, 84, 44,0.8);*/
-      position: relative;
+
       color: white;
       font-size: 1.4rem;
     }
 
-    .eventos{
+
+    @media (min-width: 768px) {
+      .servicio {
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin: 1rem;
+        flex: 1 1 30%;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        text-align: center;
+        width: 18%;
+        background-color:rgba(84, 84, 44,0.8); /*rgba(84, 84, 44,0.8);*/
+        position: relative;
+        color: white;
+        font-size: 1.4rem;
+      }
+    }
+
+
+
+    @media (min-width: 768px) {
+      .eventos{
       position: absolute;
       background-image: url(../img/silueta_eventos-fondo.png);
       background-repeat: no-repeat;
@@ -126,6 +170,8 @@ html {
       left: 35%;
       top: 50%;
     }
+    }
+    
 
     .titulo-gen{
       color: #d3cd2f;
@@ -152,11 +198,9 @@ html {
         margin-top: 2rem;
         background-color: rgb(206, 206, 109);
         font-size: 1.5rem;
-        height:4.5rem;
+        height:6rem;
         border-radius: 2rem;
     }
-
-    
 
      .btn-servicio:hover{
         color: white;
@@ -164,19 +208,35 @@ html {
 
     }
 
+     @media (min-width: 768px) {
+      .btn-servicio{
+  
+        height:4.5rem;
+  
+    }
+    }
+
+
     .btn-2{
       width: 12rem;
       margin: 1.5rem auto;
+      
     }
 
     .btn-3{
-      width: 100%;
-      margin-top: 2rem;
+        width: 100%;
+        margin-top: 2rem;
+        height: 8rem;
     }
+   
 
-    @media (max-width: 768px) {
-      .servicio {
-        flex: 1 1 100%;
+    @media (min-width: 768px) {
+
+      .btn-3{
+        width: 100%;
+        margin-top: 2rem;
+        height: 5rem;
+        
       }
     } 
 
@@ -186,11 +246,22 @@ html {
 #eventos {
       padding: 4rem 2rem;
       display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2rem;
+
+      /*background-color: #2a2809e1;/* #f9f9f9;*/
+    }
+
+@media (min-width: 768px) {
+    #eventos {
+      padding: 4rem 2rem;
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
 
       /*background-color: #2a2809e1;/* #f9f9f9;*/
     }
+}
 
   .flex-eventos{
     display: flex;
@@ -218,7 +289,6 @@ html {
     .evento .informacion{
       display: grid;
       grid-template-columns: 60% 40%;
-
     }
 
 
@@ -270,10 +340,20 @@ html {
     #artistas {
       padding: 4rem 2rem;
       display: grid;
-      grid-template-columns: 55% 45%;/*repeat(2, 1fr);*/
+      grid-template-columns: 90%;/*repeat(2, 1fr);*/
       grid-gap: 2rem;
-
     }
+
+    @media (min-width: 768px) {
+      #artistas {
+        padding: 4rem 2rem;
+        display: grid;
+        grid-template-columns: 55% 45%;/*repeat(2, 1fr);*/
+        grid-gap: 2rem;
+
+      }
+    }
+
     .artista {
       background: rgb(255, 255, 255);
       border: 1px solid #ddd;

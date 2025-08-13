@@ -147,6 +147,7 @@ html {
         display: block;
         color: black;
         text-decoration: none;
+        text-align: center;
         padding: 1rem 2rem;
         margin-top: 2rem;
         background-color: rgb(206, 206, 109);
@@ -155,10 +156,22 @@ html {
         border-radius: 2rem;
     }
 
+    
+
      .btn-servicio:hover{
         color: white;
         background-color: rgb(84, 84, 44);
 
+    }
+
+    .btn-2{
+      width: 12rem;
+      margin: 1.5rem auto;
+    }
+
+    .btn-3{
+      width: 100%;
+      margin-top: 2rem;
     }
 
     @media (max-width: 768px) {
@@ -185,11 +198,11 @@ html {
     align-items: center;
   }
 
-  .flex-eventos a{
+  /*.flex-eventos a{
     width: 15rem;
     margin-bottom: 2rem;
     text-align: center;
-  }
+  }*/
     .evento {
       background: rgb(255, 255, 255);
       border: 1px solid #ddd;
@@ -205,7 +218,6 @@ html {
     .evento .informacion{
       display: grid;
       grid-template-columns: 60% 40%;
-      grid-gap: 2rem;
 
     }
 
@@ -250,4 +262,100 @@ html {
       padding: .8rem;
 
       width: 100%;
+    }
+
+
+    /*   _---------------------------- página artistas ---------------------------*/
+
+    #artistas {
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 55% 45%;/*repeat(2, 1fr);*/
+      grid-gap: 2rem;
+
+    }
+    .artista {
+      background: rgb(255, 255, 255);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      /*padding: 2rem 4rem;*/
+
+      
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+      align-content: center;
+    }
+
+    .artista .informacion-artistas{
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+
+    }
+
+
+    .info-artista{
+      text-align: left;
+      padding: 1rem 1.5rem;
+    }
+
+    .info-artista span{
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .info-artista p{
+      font-size: 1.5rem;
+    }
+
+    .imagen-artista{
+      max-height: 40rem;/*15rem;*/
+      max-width: 90%;/*15rem;*/
+      size: cover;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(250,250,250,1);
+    }
+
+
+
+
+    .entrevistas {
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .entrevista {
+
+      background: rgb(255, 255, 255);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      /*padding: 2rem 4rem;*/
+
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+      align-content: center;
+    }
+
+
+    .info-entrevista{
+      text-align: left;
+      padding: 1rem 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .info-entrevista span{
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-entrevista p{
+      font-size: 1.5rem;
+    }
+
+    .contenido{
+      color: white;
+      text-shadow: none;
+      margin-top: 2rem;
+      font-size: 2rem;
     }

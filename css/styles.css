@@ -143,12 +143,19 @@ html {
 
 
     @media (min-width: 768px) {
+
+        .frase{
+         position: absolute;
+         top: 10%;
+         left: 25%;
+         width: 48%;
+        }
       .eventos{
       position: absolute;
       background-image: url(../img/silueta_eventos-fondo.png);
       background-repeat: no-repeat;
       background-size: cover;
-      top: 5%;
+      top: 50%;
       left: 5%;
     }
 
@@ -158,7 +165,7 @@ html {
       background-repeat: no-repeat;
       background-size: cover;
       
-      top:30%;
+      top:50%;
       right:5%;
       
     }
